@@ -15,6 +15,16 @@
 			<a href="http://tutorial.djangogirls.org/en/django_installation/README.html"><img src="https://pbs.twimg.com/profile_images/474213835859951617/4vabKlGs.png" width="100"/> </a>
         </div>
 		<div>
+		</div>
+		</div>
+
+	{% for post in posts %}
+		<div>
+			<p>published: {{ post.published_date }}</p>
+			<h1><a href="">{{ post.title }}</a></h1>
+			<p>{{ post.text|linebreaks }}</p>
+		</div>
+	{% endfor %}
 		<table>
 		<tr>
 		<td><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSS3xbCnJTu1EXPVlPOpyMY51U-oXCxGtpAoSpV4pkxlPb7lvTj" width="100"/></td>
